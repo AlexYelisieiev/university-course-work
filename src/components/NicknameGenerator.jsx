@@ -43,8 +43,8 @@ const NicknameGenerator = () => {
 	return (
 		<form>
 			<div className="row mb-2">
-				<label className='col-sm-1 col-form-label' htmlFor="name">Name:</label>
-				<div className="col-sm-11">
+				<label className='col-sm-2 col-form-label' htmlFor="name">Name:</label>
+				<div className="col-sm-10">
 					<input
 						className='form-control'
 						type="text"
