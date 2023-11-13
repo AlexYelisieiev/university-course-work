@@ -43,8 +43,8 @@ const NicknameGenerator = () => {
 	return (
 		<form>
 			<div className="row mb-2">
-				<label className='col-sm-2 col-form-label' htmlFor="name">Name:</label>
-				<div className="col-sm-10">
+				<label className='col-sm-1 col-form-label' htmlFor="name">Name:</label>
+				<div className="col-sm-11">
 					<input
 						className='form-control'
 						type="text"
@@ -55,7 +55,7 @@ const NicknameGenerator = () => {
 				</div>
 			</div>
 			<div className='row mb-2'>
-				<label className='col-sm-4 form-check-label'>
+				<label className='col-sm-2 form-check-label'>
 					<input
 						className='form-check-input me-1'
 						type="checkbox"
@@ -66,7 +66,7 @@ const NicknameGenerator = () => {
 				</label>
 			</div>
 			<div className='row mb-2'>
-				<label className='col-sm-4 col-check-label'>
+				<label className='col-sm-2 col-check-label'>
 					<input
 						className='form-check-input me-1'
 						type="checkbox"
@@ -77,7 +77,7 @@ const NicknameGenerator = () => {
 				</label>
 			</div>
 			<div className='row mb-2'>
-				<label className='col-sm-4 col-check-label'>
+				<label className='col-sm-2 col-check-label'>
 					<input
 						className='form-check-input me-1'
 						type="checkbox"
@@ -88,18 +88,20 @@ const NicknameGenerator = () => {
 				</label>
 			</div>
 			<div className='row mb-3'>
-				<label className='col-sm-4 col-form-label' htmlFor="asciiStyle">ASCII Style:</label>
-				<select
-					className='form-select'
-					id="asciiStyle"
-					value={asciiStyle}
-					onChange={(e) => setAsciiStyle(e.target.value)}
-				>
-					<option value="">None</option>
-					<option value="uppercase">Uppercase</option>
-					<option value="leet">Leet Style</option>
-					{/* Add more ASCII style options as needed */}
-				</select>
+				<label className='col-sm-1 col-form-label' htmlFor="asciiStyle">ASCII Style:</label>
+				<div className="col-sm-11">
+					<select
+						className='form-select'
+						id="asciiStyle"
+						value={asciiStyle}
+						onChange={(e) => setAsciiStyle(e.target.value)}
+					>
+						<option value="">None</option>
+						<option value="uppercase">Uppercase</option>
+						<option value="leet">Leet Style</option>
+						{/* Add more ASCII style options as needed */}
+					</select>
+				</div>
 			</div>
 			<button className='btn btn-primary' onClick={generateNickname}>Generate Nickname</button>
 			<hr className='hr hr-blurred'/>
