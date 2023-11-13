@@ -41,9 +41,9 @@ const NicknameGenerator = () => {
 	};
 
 	return (
-		<form className='form-horizontal'>
-			<div className="form-group">
-				<label className='label-control' htmlFor="name">Name:</label>
+		<form>
+			<div className="row">
+				<label className='col-sm-2 col-form-label' htmlFor="name">Name:</label>
 				<input
 					className='form-control'
 					type="text"
@@ -52,10 +52,10 @@ const NicknameGenerator = () => {
 					onChange={(e) => setName(e.target.value)}
 				/>
 			</div>
-			<div className='form-group'>
-				<label className='form-control'>
+			<div className='row'>
+				<label className='col-2 form-check-label'>
 					<input
-						className='form-control'
+						className='form-check-input'
 						type="checkbox"
 						checked={useEmojis}
 						onChange={() => setUseEmojis(!useEmojis)}
@@ -65,34 +65,27 @@ const NicknameGenerator = () => {
 			</div>
 			<div>
 				<label>
-					<div className="checkbox">
-						<input
-							className='form-control'
-							type="checkbox"
-							checked={usePrefix}
-							onChange={() => setUsePrefix(!usePrefix)}
-						/>	
-						Use Prefix
-					</div>
+					<input
+						type="checkbox"
+						checked={usePrefix}
+						onChange={() => setUsePrefix(!usePrefix)}
+					/>
+					Use Prefix
 				</label>
 			</div>
-			<div className='form-group'>
+			<div>
 				<label>
-					<div className="checkbox">
-						<input
-							className='form-control'
-							type="checkbox"
-							checked={useSuffix}
-							onChange={() => setUseSuffix(!useSuffix)}
-						/>
-						Use Suffix	
-					</div>
+					<input
+						type="checkbox"
+						checked={useSuffix}
+						onChange={() => setUseSuffix(!useSuffix)}
+					/>
+					Use Suffix
 				</label>
 			</div>
-			<div className="form-group mb-3">
-				<label className='label-control' htmlFor="asciiStyle">ASCII Style:</label>
+			<div>
+				<label htmlFor="asciiStyle">ASCII Style:</label>
 				<select
-					className='form-control'
 					id="asciiStyle"
 					value={asciiStyle}
 					onChange={(e) => setAsciiStyle(e.target.value)}
@@ -103,9 +96,9 @@ const NicknameGenerator = () => {
 					{/* Add more ASCII style options as needed */}
 				</select>
 			</div>
-			<button className='btn btn-primary' onClick={generateNickname}>Generate Nickname</button>
-			<div className='row mt-4'>
-				<span><span className='text-bold'>Generated Nickname:</span> {nickname}</span>
+			<button onClick={generateNickname}>Generate Nickname</button>
+			<div style={{ marginTop: '10px', fontSize: '18px' }}>
+				<strong>Generated Nickname:</strong> {nickname}
 			</div>
 		</form>
 	);
