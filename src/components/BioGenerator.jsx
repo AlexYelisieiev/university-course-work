@@ -50,51 +50,74 @@ const BioGenerator = () => {
   };
 
   return (
-    <div>
-      <label htmlFor="theme">Select Theme:</label>
-      <select
-        id="theme"
-        value={selectedTheme}
-        onChange={(e) => setSelectedTheme(e.target.value)}
-      >
-        <option value="default">Default</option>
-        <option value="sections">Sections</option>
-        <option value="dashes">Dashes</option>
-        <option value="dots">Dots</option>
-        <option value="jungle">Jungle Style</option>
-        <option value="beach">Beach Style</option>
-        <option value="stars">Stars Style</option>
-        {/* Add more themes as needed */}
-      </select>
-
-      {sections.map((section, index) => (
-        <div key={index}>
-          <label htmlFor={`section-title-${index}`}>Section Title:</label>
+    <form>
+      <div className="row mb-2">
+        <label className='col-sm-2 col-form-label' htmlFor="name">Name:</label>
+        <div className="col-sm-10">
           <input
+            className='form-control'
             type="text"
-            id={`section-title-${index}`}
-            value={section.label}
-            onChange={(e) => updateSectionLabel(index, e.target.value)}
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
-          <label htmlFor={`section-${index}`}>Section Content:</label>
-          <input
-            type="text"
-            id={`section-${index}`}
-            value={section.value}
-            onChange={(e) => updateSectionValue(index, e.target.value)}
-          />
-          <button onClick={() => removeSection(index)}>Remove</button>
         </div>
-      ))}
-
-      <button onClick={addSection}>Add Section</button>
-      <button onClick={generateBio}>Generate Bio</button>
-
-      <div>
-        <strong>Generated Bio:</strong>
-        <pre>{bio}</pre>
       </div>
-    </div>
+      <div className='row mb-2'>
+        <label className='col-sm-2 form-check-label'>
+          <input
+            className='form-check-input me-1'
+            type="checkbox"
+            checked={useEmojis}
+            onChange={() => setUseEmojis(!useEmojis)}
+          />
+          Use Emojis
+        </label>
+      </div>
+      <div className='row mb-2'>
+        <label className='col-sm-2 col-check-label'>
+          <input
+            className='form-check-input me-1'
+            type="checkbox"
+            checked={usePrefix}
+            onChange={() => setUsePrefix(!usePrefix)}
+          />
+          Use Prefix
+        </label>
+      </div>
+      <div className='row mb-2'>
+        <label className='col-sm-2 col-check-label'>
+          <input
+            className='form-check-input me-1'
+            type="checkbox"
+            checked={useSuffix}
+            onChange={() => setUseSuffix(!useSuffix)}
+          />
+          Use Suffix
+        </label>
+      </div>
+      <div className='row mb-3'>
+        <label className='col-sm-2 col-form-label' htmlFor="asciiStyle">ASCII Style:</label>
+        <div className="col-sm-10">
+          <select
+            className='form-select'
+            id="asciiStyle"
+            value={asciiStyle}
+            onChange={(e) => setAsciiStyle(e.target.value)}
+          >
+            <option value="">None</option>
+            <option value="uppercase">Uppercase</option>
+            <option value="leet">Leet Style</option>
+            {/* Add more ASCII style options as needed */}
+          </select>
+        </div>
+      </div>
+      <button className='btn btn-primary mb-3' onClick={generateNickname}>Generate Nickname</button>
+      <div className='row'>
+        <span><span className='text-bold'>Generated Nickname:</span> {nickname}</span>
+      </div>
+      <hr className='hr my-2'/>
+    </form>
   );
 };
 
