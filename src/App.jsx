@@ -5,7 +5,7 @@ import AchievementSection from './components/AchievementSection';
 
 const App = () => {
     return (
-        <div className='container'>
+        <div className="conainer-fluid">
             <nav className="navbar navbar-expand-sm">
                 <a href="/" className="navbar-brand">Gamiee</a>
                 <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarContent">
@@ -19,9 +19,17 @@ const App = () => {
                     </ul>
                 </div>
             </nav>
-            <NicknameGenerator />
-            <BioGenerator />
-            <AchievementSection />
+            <div className='container'>
+                <div className="row">
+                    <NicknameGenerator/>
+                </div>
+                <div className="row">
+                    <BioGenerator/>
+                </div>
+                <div className="row">
+                    <AchievementSection/>
+                </div>
+            </div>
         </div>
     );
 };
