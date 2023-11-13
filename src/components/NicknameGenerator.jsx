@@ -42,7 +42,7 @@ const NicknameGenerator = () => {
 
 	return (
 		<form>
-			<div className="row">
+			<div className="row mb-2">
 				<label className='col-sm-2 col-form-label' htmlFor="name">Name:</label>
 				<div className="col-sm-10">
 					<input
@@ -54,10 +54,10 @@ const NicknameGenerator = () => {
 					/>
 				</div>
 			</div>
-			<div className='row'>
-				<label className='col-2 form-check-label'>
+			<div className='row mb-2'>
+				<label className='col-sm-3 form-check-label'>
 					<input
-						className='form-check-input'
+						className='form-check-input me-1'
 						type="checkbox"
 						checked={useEmojis}
 						onChange={() => setUseEmojis(!useEmojis)}
@@ -65,9 +65,10 @@ const NicknameGenerator = () => {
 					Use Emojis
 				</label>
 			</div>
-			<div>
-				<label>
+			<div className='row mb-2'>
+				<label className='col-3 col-check-label'>
 					<input
+						className='form-check-input me-1'
 						type="checkbox"
 						checked={usePrefix}
 						onChange={() => setUsePrefix(!usePrefix)}
@@ -75,9 +76,10 @@ const NicknameGenerator = () => {
 					Use Prefix
 				</label>
 			</div>
-			<div>
-				<label>
+			<div className='row mb-2'>
+				<label className='col-3 col-check-label'>
 					<input
+						className='form-check-input me-1'
 						type="checkbox"
 						checked={useSuffix}
 						onChange={() => setUseSuffix(!useSuffix)}
@@ -85,9 +87,10 @@ const NicknameGenerator = () => {
 					Use Suffix
 				</label>
 			</div>
-			<div>
-				<label htmlFor="asciiStyle">ASCII Style:</label>
+			<div className='row mb-3'>
+				<label className='col-sm-2 col-form-label' htmlFor="asciiStyle">ASCII Style:</label>
 				<select
+					className='form-select'
 					id="asciiStyle"
 					value={asciiStyle}
 					onChange={(e) => setAsciiStyle(e.target.value)}
@@ -98,8 +101,9 @@ const NicknameGenerator = () => {
 					{/* Add more ASCII style options as needed */}
 				</select>
 			</div>
-			<button onClick={generateNickname}>Generate Nickname</button>
-			<div style={{ marginTop: '10px', fontSize: '18px' }}>
+			<button className='btn btn-primary' onClick={generateNickname}>Generate Nickname</button>
+			<hr className='hr hr-blurry'/>
+			<div>
 				<strong>Generated Nickname:</strong> {nickname}
 			</div>
 		</form>
