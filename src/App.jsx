@@ -7,7 +7,7 @@ const App = () => {
     return (
         <div className='container'>
             <nav className="navbar navbar-expand-sm">
-                <a href="/" className="navbar-logo">Gamiee</a>
+                <a href="/" className="navbar-brand">Gamiee</a>
                 <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarContent">
                     <span className='navbar-toggler-icon'></span>
                 </button>
