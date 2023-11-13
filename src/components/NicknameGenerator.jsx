@@ -44,13 +44,15 @@ const NicknameGenerator = () => {
 		<form>
 			<div className="row">
 				<label className='col-sm-2 col-form-label' htmlFor="name">Name:</label>
-				<input
-					className='col-sm-10 form-control'
-					type="text"
-					id="name"
-					value={name}
-					onChange={(e) => setName(e.target.value)}
-				/>
+				<div className="col-sm-10">
+					<input
+						className='form-control'
+						type="text"
+						id="name"
+						value={name}
+						onChange={(e) => setName(e.target.value)}
+					/>
+				</div>
 			</div>
 			<div className='row'>
 				<label className='col-2 form-check-label'>
