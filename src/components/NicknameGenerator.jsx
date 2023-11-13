@@ -103,11 +103,11 @@ const NicknameGenerator = () => {
 					</select>
 				</div>
 			</div>
-			<button className='btn btn-primary mb-5' onClick={generateNickname}>Generate Nickname</button>
+			<button className='btn btn-primary mb-3' onClick={generateNickname}>Generate Nickname</button>
 			<div className='row'>
 				<span><span className='text-bold'>Generated Nickname:</span> {nickname}</span>
 			</div>
-			<hr className='hr'/>
+			<hr className='hr my-2'/>
 		</form>
 	);
 };
