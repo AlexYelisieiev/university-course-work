@@ -45,7 +45,7 @@ const NicknameGenerator = () => {
 			<div className="row">
 				<label className='col-sm-2 col-form-label' htmlFor="name">Name:</label>
 				<input
-					className='form-control'
+					className='col-sm-10 form-control'
 					type="text"
 					id="name"
 					value={name}
