@@ -55,7 +55,7 @@ const NicknameGenerator = () => {
 				</div>
 			</div>
 			<div className='row mb-2'>
-				<label className='col-sm-3 form-check-label'>
+				<label className='col-sm-4 form-check-label'>
 					<input
 						className='form-check-input me-1'
 						type="checkbox"
@@ -66,7 +66,7 @@ const NicknameGenerator = () => {
 				</label>
 			</div>
 			<div className='row mb-2'>
-				<label className='col-3 col-check-label'>
+				<label className='col-sm-4 col-check-label'>
 					<input
 						className='form-check-input me-1'
 						type="checkbox"
@@ -77,7 +77,7 @@ const NicknameGenerator = () => {
 				</label>
 			</div>
 			<div className='row mb-2'>
-				<label className='col-3 col-check-label'>
+				<label className='col-sm-4 col-check-label'>
 					<input
 						className='form-check-input me-1'
 						type="checkbox"
@@ -88,7 +88,7 @@ const NicknameGenerator = () => {
 				</label>
 			</div>
 			<div className='row mb-3'>
-				<label className='col-sm-2 col-form-label' htmlFor="asciiStyle">ASCII Style:</label>
+				<label className='col-sm-4 col-form-label' htmlFor="asciiStyle">ASCII Style:</label>
 				<select
 					className='form-select'
 					id="asciiStyle"
@@ -102,7 +102,7 @@ const NicknameGenerator = () => {
 				</select>
 			</div>
 			<button className='btn btn-primary' onClick={generateNickname}>Generate Nickname</button>
-			<hr className='hr hr-blurry'/>
+			<hr className='hr hr-blurred'/>
 			<div>
 				<strong>Generated Nickname:</strong> {nickname}
 			</div>
