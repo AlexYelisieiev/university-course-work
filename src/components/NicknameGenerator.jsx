@@ -104,9 +104,9 @@ const NicknameGenerator = () => {
 				</div>
 			</div>
 			<button className='btn btn-primary' onClick={generateNickname}>Generate Nickname</button>
-			<hr className='hr hr-blurred'/>
+			<hr className='hr'/>
 			<div>
-				<strong>Generated Nickname:</strong> {nickname}
+				<span><span className='text-bold'>Generated Nickname:</span> {nickname}</span>
 			</div>
 		</form>
 	);
