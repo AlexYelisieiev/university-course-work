@@ -21,7 +21,7 @@ const App = () => {
 					</div>
 				</div>
 			</nav>
-			<div className="conainer-fluid">
+			<div data-bs-spy='scroll' className="conainer-fluid">
 				<div className='container'>
 					<div className="row" id='#scrollSpyNicknameGenerator'>
 						<NicknameGenerator />
