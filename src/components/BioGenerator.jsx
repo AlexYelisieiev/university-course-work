@@ -77,8 +77,8 @@ const BioGenerator = () => {
 			{sections.map((section, index) => (
 				<div>
 				<div key={index} className="row mb-2">
-					<label className='col-sm-3 col-form-label' htmlFor={`section-title-${index}`}>Section Title:</label>
-					<div className='col-sm-9'>
+					<label className='col-sm-4 col-form-label' htmlFor={`section-title-${index}`}>Section Title:</label>
+					<div className='col-sm-8'>
 						<input
 							className='form-control'
 							type="text"
@@ -89,8 +89,8 @@ const BioGenerator = () => {
 					</div>
 				</div>
 				<div className='row mb-2'>
-					<label className='col-sm-3 col-form-label' htmlFor={`section-${index}`}>Section Content:</label>
-					<div className='col-sm-9'>
+					<label className='col-sm-4 col-form-label' htmlFor={`section-${index}`}>Section Content:</label>
+					<div className='col-sm-8'>
 						<input
 							className='form-control'
 							type="text"
@@ -99,11 +99,7 @@ const BioGenerator = () => {
 							onChange={(e) => updateSectionValue(index, e.target.value)}
 							/>
 					</div>
-	
-					<div className="col-sm-3"></div>
-					<div className='col-sm-9'>
-						<button className='btn btn-primary' onClick={() => removeSection(index)}>Remove</button>
-					</div>
+					<button className='btn btn-primary my-2' onClick={() => removeSection(index)}>Remove</button>
 				</div>
 				</div>
 			))}
