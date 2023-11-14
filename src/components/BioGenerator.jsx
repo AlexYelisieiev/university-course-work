@@ -51,7 +51,7 @@ const BioGenerator = () => {
 
 	return (
 		<form>
-			<div className="row mb-1">
+			<div className="row mb-2">
 				<label className='col-sm-3 col-form-label' htmlFor="theme">Select Theme:</label>
 				<div className='col-sm-9'>
 					<select
@@ -73,7 +73,8 @@ const BioGenerator = () => {
 			</div>
 	
 			{sections.map((section, index) => (
-				<div key={index} className="row mb-1">
+				<div>
+				<div key={index} className="row mb-2">
 					<label className='col-sm-3 col-form-label' htmlFor={`section-title-${index}`}>Section Title:</label>
 					<div className='col-sm-9'>
 						<input
@@ -84,7 +85,8 @@ const BioGenerator = () => {
 							onChange={(e) => updateSectionLabel(index, e.target.value)}
 						/>
 					</div>
-	
+				</div>
+				<div className='row mb-2'>
 					<label className='col-sm-3 col-form-label' htmlFor={`section-${index}`}>Section Content:</label>
 					<div className='col-sm-9'>
 						<input
@@ -101,11 +103,12 @@ const BioGenerator = () => {
 						<button className='btn btn-primary' onClick={() => removeSection(index)}>Remove</button>
 					</div>
 				</div>
+				</div>
 			))}
 	
-			<div className="mb-2">
-				<button className='btn btn-success me-1' onClick={addSection}>Add Section</button>
-				<button className='btn btn-success' onClick={generateBio}>Generate Bio</button>
+			<div className="my-2">
+				<button className='btn btn-primary me-1' onClick={addSection}>Add Section</button>
+				<button className='btn btn-primary' onClick={generateBio}>Generate Bio</button>
 			</div>
 	
 			<div className='row'>
