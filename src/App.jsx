@@ -22,7 +22,7 @@ const App = () => {
 				</div>
 			</nav>
 			<div className='container'>
-				<div className="row mt-4">
+				<div className="row">
 					<NicknameGenerator />
 				</div>
 				<div className="row">

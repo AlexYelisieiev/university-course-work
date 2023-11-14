@@ -41,7 +41,7 @@ const NicknameGenerator = () => {
 	};
 
 	return (
-		<div>
+		<div className='mt-4'>
 			<h2 className='mb-1' id='scrollSpyNicknameGenerator'>Nickname generator</h2>
 		<form>
 			<div className="row mb-2">
