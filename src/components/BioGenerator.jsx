@@ -92,8 +92,7 @@ const BioGenerator = () => {
           removeSection={removeSection}
         />
       ))}
-  
-      <div className="row">
+      <div>
         <button className='btn btn-primary me-2' onClick={addSection}>Add Section</button>
         <button className='btn btn-primary' onClick={generateBio}>Generate Bio</button>
       </div>
