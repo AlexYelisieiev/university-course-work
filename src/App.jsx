@@ -14,22 +14,22 @@ const App = () => {
 					</button>
 					<div className="collapse navbar-collapse" id='navbarContent'>
 						<ul className="navbar-nav">
-							<li className="nav-item"><a href="/" className="nav-link">Nickname</a></li>
-							<li className="nav-item"><a href="/" className="nav-link">Bio</a></li>
-							<li className="nav-item"><a href="/" className="nav-link">Stats</a></li>
+							<li className="nav-item"><a href="#scrollSpyNicknameGenerator" className="nav-link">Nickname</a></li>
+							<li className="nav-item"><a href="#scrollSpyBioGenerator" className="nav-link">Bio</a></li>
+							<li className="nav-item"><a href="#scrollSpyAchievements" className="nav-link">Stats</a></li>
 						</ul>
 					</div>
 				</div>
 			</nav>
 			<div className="conainer-fluid">
 				<div className='container'>
-					<div className="row">
+					<div className="row" id='#scrollSpyNicknameGenerator'>
 						<NicknameGenerator />
 					</div>
-					<div className="row">
+					<div className="row" id='#scrollSpyBioGenerator'>
 						<BioGenerator />
 					</div>
-					<div className="row">
+					<div className="row" id='#scrollSpyAchievementsGenerator'>
 						<AchievementSection />
 					</div>
 				</div>
