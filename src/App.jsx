@@ -6,7 +6,7 @@ import AchievementSection from './components/AchievementSection';
 const App = () => {
 	return (
 		<div>
-			<nav className="navbar navbar-expand-sm px-1">
+			<nav className="navbar navbar-expand-sm px-1 fixed-top">
 				<div className="container-fluid">
 					<a href="/" className="navbar-brand">Gamiee</a>
 					<button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarContent">
