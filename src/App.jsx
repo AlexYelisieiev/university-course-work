@@ -5,8 +5,8 @@ import AchievementSection from './components/AchievementSection';
 
 const App = () => {
 	return (
-		<div>
-			<nav className="navbar navbar-dark navbar-expand-sm px-1 fixed-top">
+		<div data-bs-theme="dark">
+			<nav className="navbar navbar-dark bg-dark navbar-expand-sm px-1 fixed-top">
 				<div className="container-fluid">
 					<a href="/" className="navbar-brand">Gamiee</a>
 					<button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarContent">
@@ -21,7 +21,7 @@ const App = () => {
 					</div>
 				</div>
 			</nav>
-			<div data-bs-spy='scroll' className="conainer-fluid">
+			<div data-bs-spy='scroll' className="conainer-fluid mt-4">
 				<div className='container'>
 					<div className="row">
 						<NicknameGenerator />
