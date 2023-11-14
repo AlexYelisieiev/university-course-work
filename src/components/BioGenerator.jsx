@@ -51,10 +51,14 @@ const BioGenerator = () => {
 
   const Section = ({ section, index, updateSectionLabel, updateSectionValue, removeSection }) => {
     return (
-      <div key={`section-${index}`}>
-        <div className="row">
+      <div>
+
+      <div className="row">
           <h2 className='mb-1'>Bio generator</h2>
         </div>
+
+      <div key={`section-${index}`}>
+        
         <div className="row mb-1">
           <label className='col-sm-2 col-form-label' htmlFor={`section-title-${index}`}>Section Title:</label>
           <div className="col-sm-10">
@@ -81,6 +85,7 @@ const BioGenerator = () => {
         </div>
         <button className='btn btn-primary mb-3' onClick={() => removeSection(index)}>Remove</button>
       </div>
+      </div>
     );
   };
   
@@ -93,8 +98,8 @@ const BioGenerator = () => {
           updateSectionLabel={updateSectionLabel}
           updateSectionValue={updateSectionValue}
           removeSection={removeSection}
-        />
-      ))}
+          />
+          ))}
       <div>
         <button className='btn btn-primary me-2' onClick={addSection}>Add Section</button>
         <button className='btn btn-primary' onClick={generateBio}>Generate Bio</button>
