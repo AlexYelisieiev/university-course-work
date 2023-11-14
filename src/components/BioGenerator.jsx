@@ -50,6 +50,8 @@ const BioGenerator = () => {
 	};
 
 	return (
+		<div>
+			<h2 className='mb-1'>Bio generator</h2>
 		<form>
 			<div className="row mb-2">
 				<label className='col-sm-3 col-form-label' htmlFor="theme">Select Theme:</label>
@@ -95,7 +97,7 @@ const BioGenerator = () => {
 							id={`section-${index}`}
 							value={section.value}
 							onChange={(e) => updateSectionValue(index, e.target.value)}
-						/>
+							/>
 					</div>
 	
 					<div className="col-sm-3"></div>
@@ -116,6 +118,7 @@ const BioGenerator = () => {
 				<pre>{bio}</pre>
 			</div>
 		</form>
+			</div>
 	);
 };
 
