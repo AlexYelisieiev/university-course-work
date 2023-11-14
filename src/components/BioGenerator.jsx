@@ -50,8 +50,8 @@ const BioGenerator = () => {
 	};
 
 	return (
-		<div id='scrollSpyBioGenerator'>
-			<h2 className='mb-1'>Bio generator</h2>
+		<div>
+			<h2 className='mb-1' style={{marginTop: "10vmin"}} id='scrollSpyBioGenerator'>Bio generator</h2>
 			<form>
 				<div className="row mb-2">
 					<label className='col-sm-3 col-form-label' htmlFor="theme">Select Theme:</label>
