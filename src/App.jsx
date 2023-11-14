@@ -15,8 +15,8 @@ const App = () => {
 					<div className="collapse navbar-collapse" id='navbarContent'>
 						<ul className="navbar-nav">
 							<li className="nav-item"><a href="#scrollSpyNicknameGenerator" className="nav-link active">Nickname</a></li>
-							<li className="nav-item"><a href="#scrollSpyBioGenerator" className="nav-link">Bio</a></li>
-							<li className="nav-item"><a href="#scrollSpyAchievementsGenerator" className="nav-link">Stats</a></li>
+							<li className="nav-item"><a href="#scrollSpyBioGenerator" className="nav-link fade">Bio</a></li>
+							<li className="nav-item"><a href="#scrollSpyAchievementsGenerator" className="nav-link fade">Stats</a></li>
 						</ul>
 					</div>
 				</div>
