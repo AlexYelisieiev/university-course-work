@@ -55,7 +55,7 @@ const NicknameGenerator = () => {
 				</div>
 			</div>
 			<div className='row mb-2'>
-				<label className='col-sm-2 form-check-label'>
+				<label className='col-sm-3 form-check-label'>
 					<input
 						className='form-check-input me-1'
 						type="checkbox"
@@ -66,7 +66,7 @@ const NicknameGenerator = () => {
 				</label>
 			</div>
 			<div className='row mb-2'>
-				<label className='col-sm-2 col-check-label'>
+				<label className='col-sm-3 col-check-label'>
 					<input
 						className='form-check-input me-1'
 						type="checkbox"
@@ -77,7 +77,7 @@ const NicknameGenerator = () => {
 				</label>
 			</div>
 			<div className='row mb-2'>
-				<label className='col-sm-2 col-check-label'>
+				<label className='col-sm-3 col-check-label'>
 					<input
 						className='form-check-input me-1'
 						type="checkbox"
@@ -88,7 +88,7 @@ const NicknameGenerator = () => {
 				</label>
 			</div>
 			<div className='row mb-3'>
-				<label className='col-sm-2 col-form-label' htmlFor="asciiStyle">ASCII Style:</label>
+				<label className='col-sm-3 col-form-label' htmlFor="asciiStyle">ASCII Style:</label>
 				<div className="col-sm-10">
 					<select
 						className='form-select'
