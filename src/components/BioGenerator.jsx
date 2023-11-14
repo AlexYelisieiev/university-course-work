@@ -50,77 +50,62 @@ const BioGenerator = () => {
   };
 
   return (
-    <div className="form-horizontal">
-      <div className="form-group">
-        <label htmlFor="theme" className="col-sm-2 control-label">Select Theme:</label>
-        <div className="col-sm-10">
-          <select
-            id="theme"
-            className="form-control"
-            value={selectedTheme}
-            onChange={(e) => setSelectedTheme(e.target.value)}
-          >
-            <option value="default">Default</option>
-            <option value="sections">Sections</option>
-            <option value="dashes">Dashes</option>
-            <option value="dots">Dots</option>
-            <option value="jungle">Jungle Style</option>
-            <option value="beach">Beach Style</option>
-            <option value="stars">Stars Style</option>
-            {/* Add more themes as needed */}
-          </select>
-        </div>
+    <form>
+      <div className="row mb-1">
+      <label className='col-sm-2 col-form-label' htmlFor="theme">Select Theme:</label>
+      <select
+        className='col-sm-10 form-control'
+        id="theme"
+        value={selectedTheme}
+        onChange={(e) => setSelectedTheme(e.target.value)}
+      >
+        <option value="default">Default</option>
+        <option value="sections">Sections</option>
+        <option value="dashes">Dashes</option>
+        <option value="dots">Dots</option>
+        <option value="jungle">Jungle Style</option>
+        <option value="beach">Beach Style</option>
+        <option value="stars">Stars Style</option>
+        {/* Add more themes as needed */}
+      </select>
       </div>
-  
-      {sections.map((section, index) => (
-        <form action="">
 
-        <div className="form-group" key={index}>
-          <label htmlFor={`section-title-${index}`} className="col-sm-2 control-label">Section Title:</label>
-          <div className="col-sm-10">
-            <input
-              type="text"
-              id={`section-title-${index}`}
-              className="form-control"
-              value={section.label}
-              onChange={(e) => updateSectionLabel(index, e.target.value)}
+      {sections.map((section, index) => (
+        <div key={index}>
+          <div className="row mb-1">
+            
+          <label className='col-sm-2 col-form-label' htmlFor={`section-title-${index}`}>Section Title:</label>
+          <input
+            className='col-sm-10 form-control'
+            type="text"
+            id={`section-title-${index}`}
+            value={section.label}
+            onChange={(e) => updateSectionLabel(index, e.target.value)}
             />
+            </div>
+            <div className="row mb-2">
+          <label className='col-sm-2 col-form-label' htmlFor={`section-${index}`}>Section Content:</label>
+          <input
+            className='col-sm-10 form-control'
+            type="text"
+            id={`section-${index}`}
+            value={section.value}
+            onChange={(e) => updateSectionValue(index, e.target.value)}
+          />
           </div>
+          <button className='btn btn-success' onClick={() => removeSection(index)}>Remove</button>
         </div>
-        <div className="form-group" key={index}>
-          <label htmlFor={`section-${index}`} className="col-sm-2 control-label">Section Content:</label>
-          <div className="col-sm-10">
-            <input
-              type="text"
-              id={`section-${index}`}
-              className="form-control"
-              value={section.value}
-              onChange={(e) => updateSectionValue(index, e.target.value)}
-            />
-          </div>
-        </div>
-        <div className="form-group" key={index}>
-          <div className="col-sm-offset-2 col-sm-10">
-            <button className="btn btn-danger" onClick={() => removeSection(index)}>Remove</button>
-          </div>
-        </div>
-        </form>
       ))}
-  
-      <div className="form-group">
-        <div className="col-sm-offset-2 col-sm-10">
-          <button className="btn btn-primary" onClick={addSection}>Add Section</button>
-          <button className="btn btn-success" onClick={generateBio}>Generate Bio</button>
-        </div>
+
+        <button className='btn btn-success me-1' onClick={addSection}>Add Section</button>
+        <button className='btn btn-success mb-2' onClick={generateBio}>Generate Bio</button>
+
+      <div>
+        <strong>Generated Bio:</strong>
+        <pre>{bio}</pre>
       </div>
-  
-      <div className="form-group">
-        <strong className="col-sm-2 control-label">Generated Bio:</strong>
-        <div className="col-sm-10">
-          <pre>{bio}</pre>
-        </div>
-      </div>
-    </div>
+    </form>
   );
+};
 
 export default BioGenerator;
