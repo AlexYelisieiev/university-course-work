@@ -21,7 +21,7 @@ const App = () => {
 					</div>
 				</div>
 			</nav>
-			<div className='container' style={{marginTop: "15vmin"}}>
+			<div className='container'>
 				<div className="row">
 					<NicknameGenerator />
 				</div>
