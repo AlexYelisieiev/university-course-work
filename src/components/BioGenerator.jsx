@@ -94,14 +94,6 @@ const BioGenerator = () => {
         </div>
       </div>
       ))}
-    
-      <button className='btn btn-primary mb-3' onClick={addSection}>Add Section</button>
-      <button className='btn btn-primary mb-3' onClick={generateBio}>Generate Bio</button>
-    
-      <div className='row'>
-        <strong>Generated Bio:</strong>
-        <pre>{bio}</pre>
-      </div>
     </div>
   );
 };
