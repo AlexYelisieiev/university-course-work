@@ -20,62 +20,58 @@ const AchievementSection = () => {
   return (
     <div>
       <h2>Achievements</h2>
-      <div style={achievementsContainerStyle}>
-        <label htmlFor="game">Game:</label>
-        <input
-          type="text"
-          id="game"
-          value={game}
-          onChange={(e) => setGame(e.target.value)}
-        />
-        <label htmlFor="level">Level:</label>
-        <input
-          type="text"
-          id="level"
-          value={level}
-          onChange={(e) => setLevel(e.target.value)}
-        />
-        <label htmlFor="results">Results:</label>
-        <input
-          type="text"
-          id="results"
-          value={results}
-          onChange={(e) => setResults(e.target.value)}
-        />
-        <button onClick={addAchievement}>Add Achievement</button>
+      <div className="row mb-2">
+        <label className='col-sm-2 col-form-label' htmlFor="game">Game:</label>
+        <div className="col-sm-10">
+          <input
+            className='form-control'
+            type="text"
+            id="game"
+            value={game}
+            onChange={(e) => setGame(e.target.value)}
+          />
+        </div>
       </div>
+      <div className="row mb-2">
+        <label className='col-sm-2 col-form-label' htmlFor="level">Level:</label>
+        <div className="col-sm-10">
+          <input
+            className='form-control'
+            type="text"
+            id="level"
+            value={level}
+            onChange={(e) => setLevel(e.target.value)}
+          />
+        </div>
+      </div>
+      <div className="row mb-2">
+        <label className='col-sm-2 col-form-label' htmlFor="results">Results:</label>
+        <div className="col-sm-10">
+          <input
+            className='form-control'
+            type="text"
+            id="results"
+            value={results}
+            onChange={(e) => setResults(e.target.value)}
+          />
+        </div>
+      </div>
+      <button className='btn btn-primary mb-3' onClick={addAchievement}>Add Achievement</button>
 
       {/* Display added achievements */}
-      <div style={achievementsListStyle}>
+      <div>
         {achievements.map((achievement, index) => (
-          <div key={index} style={achievementCardStyle}>
-            <p><strong>Game:</strong> {achievement.game}</p>
-            <p><strong>Level:</strong> {achievement.level}</p>
-            <p><strong>Results:</strong> {achievement.results}</p>
+          <div key={index} className='card mb-2' style={{ width: '18rem' }}>
+            <div className='card-body'>
+              <p className='card-text'><strong>Game:</strong> {achievement.game}</p>
+              <p className='card-text'><strong>Level:</strong> {achievement.level}</p>
+              <p className='card-text'><strong>Results:</strong> {achievement.results}</p>
+            </div>
           </div>
         ))}
       </div>
     </div>
   );
-};
-
-// Styles
-const achievementsContainerStyle = {
-  marginBottom: '20px',
-};
-
-const achievementsListStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-};
-
-const achievementCardStyle = {
-  border: '1px solid #ccc',
-  borderRadius: '8px',
-  padding: '10px',
-  marginBottom: '10px',
-  width: '300px',
 };
 
 export default AchievementSection;
