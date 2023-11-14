@@ -21,8 +21,8 @@ const App = () => {
 					</div>
 				</div>
 			</nav>
-			<div className='container pt-4'>
-				<div className="row">
+			<div className='container'>
+				<div className="row mt-4">
 					<NicknameGenerator />
 				</div>
 				<div className="row">
