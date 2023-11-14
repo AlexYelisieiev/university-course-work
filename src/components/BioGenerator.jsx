@@ -49,51 +49,59 @@ const BioGenerator = () => {
     setBio(bioThemes[selectedTheme]());
   };
 
+  const Section = ({ section, index, updateSectionLabel, updateSectionValue, removeSection }) => {
+    return (
+      <div key={`section-${index}`}>
+        <div className="row mb-1">
+          <label className='col-sm-2 col-form-label' htmlFor={`section-title-${index}`}>Section Title:</label>
+          <div className="col-sm-10">
+            <input
+              className='form-control'
+              type="text"
+              id={`section-title-${index}`}
+              value={section.label}
+              onChange={(e) => updateSectionLabel(index, e.target.value)}
+            />
+          </div>
+        </div>
+        <div className="row mb-1">
+          <label className='col-sm-2 col-form-label' htmlFor={`section-${index}`}>Section Content:</label>
+          <div className="col-sm-10">
+            <input
+              className='form-control'
+              type="text"
+              id={`section-${index}`}
+              value={section.value}
+              onChange={(e) => updateSectionValue(index, e.target.value)}
+            />
+          </div>
+        </div>
+        <button className='btn btn-primary mb-3' onClick={() => removeSection(index)}>Remove</button>
+      </div>
+    );
+  };
+  
   return (
     <div>
       {sections.map((section, index) => (
-        <div>
-        {sections.map((section, index) => (
-          <div key={`section-${index}`}>
-            <div className="row mb-1">
-              <label className='col-sm-2 col-form-label' htmlFor={`section-title-${index}`}>Section Title:</label>
-              <div className="col-sm-10">
-                <input
-                  className='form-control'
-                  type="text"
-                  id={`section-title-${index}`}
-                  value={section.label}
-                  onChange={(e) => updateSectionLabel(index, e.target.value)}
-                />
-              </div>
-            </div>
-            <div className="row mb-1">
-              <label className='col-sm-2 col-form-label' htmlFor={`section-${index}`}>Section Content:</label>
-              <div className="col-sm-10">
-                <input
-                  className='form-control'
-                  type="text"
-                  id={`section-${index}`}
-                  value={section.value}
-                  onChange={(e) => updateSectionValue(index, e.target.value)}
-                />
-              </div>
-            </div>
-            <button className='btn btn-primary mb-3' onClick={() => removeSection(index)}>Remove</button>
-          </div>
-        ))}
-        
-        <div className="row">
-          <button className='btn btn-primary me-2' onClick={addSection}>Add Section</button>
-          <button className='btn btn-primary' onClick={generateBio}>Generate Bio</button>
-        </div>
-      
-        <div className='row'>
-          <strong>Generated Bio:</strong>
-          <pre>{bio}</pre>
-        </div>
-      </div>
+        <Section
+          section={section}
+          index={index}
+          updateSectionLabel={updateSectionLabel}
+          updateSectionValue={updateSectionValue}
+          removeSection={removeSection}
+        />
       ))}
+  
+      <div className="row">
+        <button className='btn btn-primary me-2' onClick={addSection}>Add Section</button>
+        <button className='btn btn-primary' onClick={generateBio}>Generate Bio</button>
+      </div>
+  
+      <div className='row'>
+        <strong>Generated Bio:</strong>
+        <pre>{bio}</pre>
+      </div>
     </div>
   );
 };
