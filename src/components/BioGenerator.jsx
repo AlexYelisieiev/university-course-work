@@ -54,7 +54,7 @@ const BioGenerator = () => {
 			<div className="row mb-1">
 				<label className='col-sm-3 col-form-label' htmlFor="theme">Select Theme:</label>
 				<select
-					className='col-sm-9 form-control'
+					className='col-sm-5 form-control'
 					id="theme"
 					value={selectedTheme}
 					onChange={(e) => setSelectedTheme(e.target.value)}
@@ -73,7 +73,6 @@ const BioGenerator = () => {
 			{sections.map((section, index) => (
 				<div key={index}>
 					<div className="row mb-1">
-
 						<label className='col-sm-3 col-form-label' htmlFor={`section-title-${index}`}>Section Title:</label>
 						<input
 							className='col-sm-9 form-control'
