@@ -89,7 +89,7 @@ const NicknameGenerator = () => {
 			</div>
 			<div className='row mb-3'>
 				<label className='col-sm-3 col-form-label' htmlFor="asciiStyle">ASCII Style:</label>
-				<div className="col-sm-10">
+				<div className="col-sm-9">
 					<select
 						className='form-select'
 						id="asciiStyle"
