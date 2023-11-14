@@ -52,6 +52,9 @@ const BioGenerator = () => {
   const Section = ({ section, index, updateSectionLabel, updateSectionValue, removeSection }) => {
     return (
       <div key={`section-${index}`}>
+        <div className="row">
+          <h2 className='mb-1'>Bio generator</h2>
+        </div>
         <div className="row mb-1">
           <label className='col-sm-2 col-form-label' htmlFor={`section-title-${index}`}>Section Title:</label>
           <div className="col-sm-10">

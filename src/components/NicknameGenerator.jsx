@@ -41,6 +41,8 @@ const NicknameGenerator = () => {
 	};
 
 	return (
+		<div>
+			<h2 className='mb-1'>Nickname generator</h2>
 		<form>
 			<div className="row mb-2">
 				<label className='col-sm-2 col-form-label' htmlFor="name">Name:</label>
@@ -109,6 +111,7 @@ const NicknameGenerator = () => {
 			</div>
 			<hr className='hr my-2'/>
 		</form>
+		</div>
 	);
 };
 

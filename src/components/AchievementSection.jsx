@@ -19,7 +19,7 @@ const AchievementSection = () => {
 
   return (
     <div>
-      <h2>Achievements</h2>
+      <h2 className='mb-1'>Achievements generator</h2>
       <div className="row mb-2">
         <label className='col-sm-2 col-form-label' htmlFor="game">Game:</label>
         <div className="col-sm-10">
