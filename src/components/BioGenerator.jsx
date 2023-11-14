@@ -84,8 +84,8 @@ const BioGenerator = () => {
         ))}
         
         <div className="row mb-2">
-          <button className='btn btn-primary me-2' onClick={addSection}>Add Section</button>
-          <button className='btn btn-primary' onClick={generateBio}>Generate Bio</button>
+          <button className='btn btn-primary col-2 me-2' onClick={addSection}>Add Section</button>
+          <button className='btn btn-primary col-2' onClick={generateBio}>Generate Bio</button>
         </div>
       
         <div className='row'>
