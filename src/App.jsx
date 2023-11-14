@@ -16,20 +16,20 @@ const App = () => {
 						<ul className="navbar-nav">
 							<li className="nav-item"><a href="#scrollSpyNicknameGenerator" className="nav-link">Nickname</a></li>
 							<li className="nav-item"><a href="#scrollSpyBioGenerator" className="nav-link">Bio</a></li>
-							<li className="nav-item"><a href="#scrollSpyAchievements" className="nav-link">Stats</a></li>
+							<li className="nav-item"><a href="#scrollSpyAchievementsGenerator" className="nav-link">Stats</a></li>
 						</ul>
 					</div>
 				</div>
 			</nav>
 			<div data-bs-spy='scroll' className="conainer-fluid">
 				<div className='container'>
-					<div className="row" id='#scrollSpyNicknameGenerator'>
+					<div className="row">
 						<NicknameGenerator />
 					</div>
-					<div className="row" id='#scrollSpyBioGenerator'>
+					<div className="row">
 						<BioGenerator />
 					</div>
-					<div className="row" id='#scrollSpyAchievementsGenerator'>
+					<div className="row">
 						<AchievementSection />
 					</div>
 				</div>
