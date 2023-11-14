@@ -109,7 +109,7 @@ const NicknameGenerator = () => {
 			<div className='row'>
 				<span><span className='text-bold'>Generated Nickname:</span> {nickname}</span>
 			</div>
-			<hr className='hr my-2'/>
+			<hr className='hr mt-2 mb-2'/>
 		</form>
 		</div>
 	);
