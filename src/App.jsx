@@ -16,7 +16,7 @@ const App = () => {
 						<ul className="navbar-nav">
 							<li className="nav-item"><a href="#scrollSpyNicknameGenerator" className="nav-link">Nickname</a></li>
 							<li className="nav-item"><a href="#scrollSpyBioGenerator" className="nav-link">Bio</a></li>
-							<li className="nav-item"><a href="#scrollSpyAchievementsGenerator" className="nav-link">Stats</a></li>
+							<li className="nav-item"><a href="#scrollSpyStatsGenerator" className="nav-link">Stats</a></li>
 						</ul>
 					</div>
 				</div>

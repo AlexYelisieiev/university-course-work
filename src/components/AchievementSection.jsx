@@ -19,7 +19,7 @@ const AchievementSection = () => {
 
   return (
     <div>
-      <h2 className='mb-2' style={{paddingTop: "7.5vmin"}} id='scrollSpyAchievementsGenerator'>Achievements generator</h2>
+      <h2 className='mb-2' style={{paddingTop: "7.5vmin"}} id='scrollSpyAchievementsGenerator'>Stats generator</h2>
       <div className="row mb-2">
         <label className='col-sm-2 col-form-label' htmlFor="game">Game:</label>
         <div className="col-sm-10">
@@ -37,7 +37,7 @@ const AchievementSection = () => {
         <div className="col-sm-10">
           <input
             className='form-control'
-            type="text"
+            type='number'
             id="level"
             value={level}
             onChange={(e) => setLevel(e.target.value)}
@@ -56,7 +56,7 @@ const AchievementSection = () => {
           />
         </div>
       </div>
-      <button className='btn btn-primary mb-3' onClick={addAchievement}>Add Achievement</button>
+      <button className='btn btn-primary mb-3' onClick={addAchievement}>Add Stats</button>
 
       {/* Display added achievements */}
       <div>
