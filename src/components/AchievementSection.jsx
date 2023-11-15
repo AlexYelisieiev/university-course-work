@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
-const AchievementSection = () => {
+const statsection = () => {
   const [game, setGame] = useState('');
   const [level, setLevel] = useState('');
   const [results, setResults] = useState('');
-  const [achievements, setAchievements] = useState([]);
+  const [stats, setstats] = useState([]);
 
-  const addAchievement = () => {
+  const addstats = () => {
     if (game && level && results) {
-      const newAchievement = { game, level, results };
-      setAchievements([...achievements, newAchievement]);
-      // Clear input fields after adding an achievement
+      const newstats = { game, level, results };
+      setstats([...stats, newstats]);
+      // Clear input fields after adding an stats
       setGame('');
       setLevel('');
       setResults('');
@@ -19,7 +19,7 @@ const AchievementSection = () => {
 
   return (
     <div>
-      <h2 className='mb-2' style={{paddingTop: "7.5vmin"}} id='scrollSpyAchievementsGenerator'>Achievements generator</h2>
+      <h2 className='mb-2' style={{paddingTop: "7.5vmin"}} id='scrollSpystatsGenerator'>stats generator</h2>
       <div className="row mb-2">
         <label className='col-sm-2 col-form-label' htmlFor="game">Game:</label>
         <div className="col-sm-10">
@@ -56,16 +56,16 @@ const AchievementSection = () => {
           />
         </div>
       </div>
-      <button className='btn btn-primary mb-3' onClick={addAchievement}>Add Achievement</button>
+      <button className='btn btn-primary mb-3' onClick={addstats}>Add stats</button>
 
-      {/* Display added achievements */}
+      {/* Display added stats */}
       <div>
-        {achievements.map((achievement, index) => (
+        {stats.map((stats, index) => (
           <div key={index} className='card mb-2' style={{ width: '18rem' }}>
             <div className='card-body'>
-              <p className='card-text'><strong>Game:</strong> {achievement.game}</p>
-              <p className='card-text'><strong>Level:</strong> {achievement.level}</p>
-              <p className='card-text'><strong>Results:</strong> {achievement.results}</p>
+              <p className='card-text'><strong>Game:</strong> {stats.game}</p>
+              <p className='card-text'><strong>Level:</strong> {stats.level}</p>
+              <p className='card-text'><strong>Results:</strong> {stats.results}</p>
             </div>
           </div>
         ))}
@@ -74,4 +74,4 @@ const AchievementSection = () => {
   );
 };
 
-export default AchievementSection;
+export default statsection;
