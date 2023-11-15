@@ -1,7 +1,7 @@
 import React from 'react';
 import NicknameGenerator from './components/NicknameGenerator';
 import BioGenerator from './components/BioGenerator';
-import statsection from './components/statsection';
+import AchievementSection from './components/AchievementSection';
 
 const App = () => {
 	return (
@@ -16,7 +16,7 @@ const App = () => {
 						<ul className="navbar-nav">
 							<li className="nav-item"><a href="#scrollSpyNicknameGenerator" className="nav-link">Nickname</a></li>
 							<li className="nav-item"><a href="#scrollSpyBioGenerator" className="nav-link">Bio</a></li>
-							<li className="nav-item"><a href="#scrollSpystatsGenerator" className="nav-link">Stats</a></li>
+							<li className="nav-item"><a href="#scrollSpyAchievementsGenerator" className="nav-link">Stats</a></li>
 						</ul>
 					</div>
 				</div>
@@ -29,7 +29,7 @@ const App = () => {
 					<BioGenerator />
 				</div>
 				<div className="row">
-					<statsection />
+					<AchievementSection />
 				</div>
 			</div>
 		</div>
