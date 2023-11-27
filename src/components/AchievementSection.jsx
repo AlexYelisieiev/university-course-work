@@ -15,13 +15,12 @@ const AchievementSection = () => {
       setGame('');
       setLevel('');
       setResults('');
-      setNickname('');
     }
   };
 
   return (
     <div>
-      <h2 className='mb-2' style={{ paddingTop: "7.5vmin" }}>Stats generator</h2>
+      <h2 className='mb-2' style={{paddingTop: "7.5vmin"}}>Stats generator</h2>
       <div className="row mb-2">
         <label className='col-sm-2 col-form-label' htmlFor="game">Game:</label>
         <div className="col-sm-10">
@@ -58,18 +57,8 @@ const AchievementSection = () => {
           />
         </div>
       </div>
-      <div className="row mb-2">
-        <label className='col-sm-2 col-form-label' htmlFor="myPage">My Page:</label>
-        <div className="col-sm-10">
-          <input
-            className='form-control'
-            type="text"
-            id="myPage"
-            value={myPage}
-            onChange={(e) => setMyPage(e.target.value)}
-          />
-        </div>
-      </div>
+      <button className='btn btn-primary mb-3' onClick={addAchievement}>Add Stats</button>
+
       {/* Display added achievements */}
       <div>
         {achievements.map((achievement, index) => (
