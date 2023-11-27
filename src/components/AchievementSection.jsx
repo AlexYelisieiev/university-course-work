@@ -6,7 +6,6 @@ const AchievementSection = () => {
   const [level, setLevel] = useState('');
   const [results, setResults] = useState('');
   const [achievements, setAchievements] = useState([]);
-  const [website, setWebsite] = useState('');
 
   const addAchievement = () => {
     if (game && level && results) {
@@ -16,16 +15,7 @@ const AchievementSection = () => {
       setGame('');
       setLevel('');
       setResults('');
-    }
-  };
-
-  const handleWebsiteChange = (e) => {
-    setWebsite(e.target.value);
-  };
-
-  const goToWebsite = () => {
-    if (website) {
-      window.location.href = website;
+      setNickname('');
     }
   };
 
@@ -69,29 +59,28 @@ const AchievementSection = () => {
         </div>
       </div>
       <div className="row mb-2">
-        <label className='col-sm-2 col-form-label' htmlFor="website">My page:</label>
+        <label className='col-sm-2 col-form-label' htmlFor="myPage">My Page:</label>
         <div className="col-sm-10">
           <input
             className='form-control'
             type="text"
-            id="website"
-            value={website}
-            onChange={handleWebsiteChange}
+            id="myPage"
+            value={myPage}
+            onChange={(e) => setMyPage(e.target.value)}
           />
         </div>
       </div>
-
       {/* Display added achievements */}
       <div>
         {achievements.map((achievement, index) => (
-          <div class="container" key={index}>
+          <div class="container">
             <div class="box">
               <span></span>
               <div class="content">
                 <h2>{achievement.game}</h2>
                 <p>Level: {achievement.level}</p>
                 <p>Results: {achievement.results}</p>
-                <a href={website}>My page</a>
+                <a href="#">Read More</a>
               </div>
             </div>
           </div>
