@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './AchievementSection.css';
 
 const AchievementSection = () => {
   const [game, setGame] = useState('');
