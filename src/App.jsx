@@ -21,14 +21,14 @@ const App = () => {
 					</div>
 				</div>
 			</nav>
-			<div className='container'>
-				<div className="row">
+			<div className='container data-bs-spy'>
+				<div className="row" id='scrollSpyNicknameGenerator'>
 					<NicknameGenerator />
 				</div>
-				<div className="row">
+				<div className="row" id='scrollSpyBioGenerator'>
 					<BioGenerator />
 				</div>
-				<div className="row">
+				<div className="row" id='scrollSpyStatsGenerator'>
 					<AchievementSection />
 				</div>
 			</div>

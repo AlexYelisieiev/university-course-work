@@ -42,7 +42,7 @@ const NicknameGenerator = () => {
 
 	return (
 		<div>
-			<h2 className='mb-2' style={{paddingTop: "15vmin"}} id='scrollSpyNicknameGenerator'>Nickname generator</h2>
+			<h2 className='mb-2' style={{paddingTop: "15vmin"}}>Nickname generator</h2>
 		<form>
 			<div className="row mb-2">
 				<label className='col-sm-2 col-form-label' htmlFor="name">Name:</label>
