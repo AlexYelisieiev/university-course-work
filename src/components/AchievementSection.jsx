@@ -61,11 +61,15 @@ const AchievementSection = () => {
       {/* Display added achievements */}
       <div>
         {achievements.map((achievement, index) => (
-          <div key={index} className='card mb-2' style={{ width: '18rem' }}>
-            <div className='card-body'>
-              <p className='card-text'><strong>Game:</strong> {achievement.game}</p>
-              <p className='card-text'><strong>Level:</strong> {achievement.level}</p>
-              <p className='card-text'><strong>Results:</strong> {achievement.results}</p>
+          <div class="container">
+            <div class="box">
+              <span></span>
+              <div class="content">
+                <h2>{achievement.game}</h2>
+                <p>Level: {achievement.level}</p>
+                <p>Results: {achievement.results}</p>
+                <a href="#">Read More</a>
+              </div>
             </div>
           </div>
         ))}
