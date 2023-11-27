@@ -174,7 +174,8 @@
 
 .container .box .content p
 {
-  font-size: 1.1em;
+  font-size: 1.5em;
+    font-weight: "bold";
   margin-bottom: 10px;
   line-height: 1.4em;
 }
@@ -182,7 +183,8 @@
 .container .box .content a
 {
   display: inline-block;
-  font-size: 1.1em;
+  font-size: 1.5em;
+    font-weight: "bold";
   color: #111;
   background: #fff;
   padding: 10px;
