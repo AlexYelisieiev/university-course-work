@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './AchievementSection.css';
+import styles from './AchievementSection.css';
 
 const AchievementSection = () => {
   const [game, setGame] = useState('');
@@ -62,10 +62,10 @@ const AchievementSection = () => {
       {/* Display added achievements */}
       <div>
         {achievements.map((achievement, index) => (
-          <div class="container">
-            <div class="box">
+          <div class={styles.container}>
+            <div class={styles.box}>
               <span></span>
-              <div class="content">
+              <div class={styles.content}>
                 <h2>{achievement.game}</h2>
                 <p>Level: {achievement.level}</p>
                 <p>Results: {achievement.results}</p>
