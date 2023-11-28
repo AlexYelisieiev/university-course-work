@@ -21,18 +21,21 @@ const BioGenerator = () => {
 		setSections(updatedSections);
 	};
 
-	const addSection = () => {
+	const addSection = (event) => {
+		event.preventDefault();
 		const newSection = { label: 'New Section', value: '' };
 		setSections([...sections, newSection]);
 	};
 
-	const removeSection = (index) => {
+	const removeSection = (event, index) => {
+		event.preventDefault();
 		const updatedSections = [...sections];
 		updatedSections.splice(index, 1);
 		setSections(updatedSections);
 	};
 
-	const generateBio = () => {
+	const generateBio = (event) => {
+		event.preventDefault();
 		// Define different bio styles based on selected theme
 		const bioThemes = {
 			default: () => sections.map((section) => `${section.label}: ${section.value}`).join('\n'),
@@ -50,8 +53,8 @@ const BioGenerator = () => {
 	};
 
 	return (
-		<div>
-			<h2 className='mb-2' style={{paddingTop: "7.5vmin"}}>Bio generator</h2>
+		<div className='px-3 py-2'>
+			<h2 className='mb-2' style={{ paddingTop: "7.5vmin" }}>Bio generator</h2>
 			<form>
 				<div className="row mb-2">
 					<label className='col-sm-3 col-form-label' htmlFor="theme">Select Theme:</label>
@@ -100,15 +103,21 @@ const BioGenerator = () => {
 								/>
 							</div>
 							<div>
-								<button className='btn btn-primary my-2' onClick={() => removeSection(index)}>Remove</button>
+								<button className='btn btn-primary my-2' onClick={event => removeSection(event, index)}>
+									Remove
+								</button>
 							</div>
 						</div>
 					</div>
 				))}
 
-				<div className="mt-2 mb-3">
-					<button className='btn btn-primary me-1' onClick={addSection}>Add Section</button>
-					<button className='btn btn-primary' onClick={generateBio}>Generate Bio</button>
+				<div className='mt-2 mb-3'>
+					<button className='btn btn-primary me-2' onClick={addSection}>
+						Add Section
+					</button>
+					<button className='btn btn-primary' onClick={generateBio}>
+						Generate Bio
+					</button>
 				</div>
 
 				<div className='row'>
