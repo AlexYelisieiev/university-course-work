@@ -115,7 +115,7 @@ const BioGenerator = () => {
 					<button className='btn btn-primary me-2' onClick={addSection}>
 						Add Section
 					</button>
-					<button className='btn btn-primary' onClick={generateBio}>
+					<button className='btn btn-primary' onClick={event => {event.preventDefault(); generateBio(event)}}>
 						Generate Bio
 					</button>
 				</div>
