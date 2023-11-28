@@ -62,6 +62,7 @@ const BioGenerator = () => {
 						  className='form-control'
 						  id="theme"
 						  value={selectedTheme}
+						  defaultValue={'default'}
 						  onChange={(e) => setSelectedTheme(e.target.value)}
 						>
 						  <option value="default">Default</option>
