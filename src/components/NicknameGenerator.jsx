@@ -32,30 +32,42 @@ const NicknameGenerator = () => {
 	};
 
 	const handleSubmit = (event) => {
-	event.preventDefault();
-	generateNickname();
+		event.preventDefault();
+		generateNickname();
 	};
 
 	return (
-	<form onSubmit={handleSubmit}>
-		<h2 className='mb-2' style={{ paddingTop: "15vmin" }}>Nickname generator</h2>
-		<label>Name:</label>
-		<input className='form-control' type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
-		<label>Use Emojis:</label>
-		<input className='form-check-input me-1' type="checkbox" checked={useEmojis} onChange={() => setUseEmojis(!useEmojis)} />
-		<label>Use Prefix:</label>
-		<input className='form-check-input me-1' type="checkbox" checked={usePrefix} onChange={() => setUsePrefix(!usePrefix)} />
-		<label>Use Suffix:</label>
-		<input className='form-check-input me-1' type="checkbox" checked={useSuffix} onChange={() => setUseSuffix(!useSuffix)} />
-		<label>ASCII Style:</label>
-		<select className='form-select' id="asciiStyle" value={asciiStyle} onChange={(e) => setAsciiStyle(e.target.value)}>
-		<option value="">None</option>
-		<option value="uppercase">Uppercase</option>
-		<option value="leet">Leet Style</option>
-		</select>
-		<button type="submit" className='btn btn-primary'>Generate Nickname</button>
-		<h3>Generated Nickname: {nickname}</h3>
-	</form>
+		<div className="container py-5">
+		<form onSubmit={handleSubmit}>
+		  <h2 className="mb-3">Nickname generator</h2>
+		  <div className="form-group">
+			<label htmlFor="name">Name:</label>
+			<input className="form-control" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+		  </div>
+		  <div className="form-check">
+			<input className="form-check-input" type="checkbox" id="useEmojis" checked={useEmojis} onChange={() => setUseEmojis(!useEmojis)} />
+			<label className="form-check-label" htmlFor="useEmojis">Use Emojis</label>
+		  </div>
+		  <div className="form-check">
+			<input className="form-check-input" type="checkbox" id="usePrefix" checked={usePrefix} onChange={() => setUsePrefix(!usePrefix)} />
+			<label className="form-check-label" htmlFor="usePrefix">Use Prefix</label>
+		  </div>
+		  <div className="form-check">
+			<input className="form-check-input" type="checkbox" id="useSuffix" checked={useSuffix} onChange={() => setUseSuffix(!useSuffix)} />
+			<label className="form-check-label" htmlFor="useSuffix">Use Suffix</label>
+		  </div>
+		  <div className="form-group">
+			<label htmlFor="asciiStyle">ASCII Style:</label>
+			<select className="form-control" id="asciiStyle" value={asciiStyle} onChange={(e) => setAsciiStyle(e.target.value)}>
+			  <option value="">None</option>
+			  <option value="uppercase">Uppercase</option>
+			  <option value="leet">Leet Style</option>
+			</select>
+		  </div>
+		  <button type="submit" className="btn btn-primary mt-3">Generate Nickname</button>
+		</form>
+		<h3 className="mt-3">Generated Nickname: {nickname}</h3>
+	  </div>
 	);
 };
 
