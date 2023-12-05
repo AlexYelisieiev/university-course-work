@@ -58,7 +58,7 @@ const NicknameGenerator = () => {
 		  </div>
 		  <div className="form-group">
 			<label htmlFor="asciiStyle">ASCII Style:</label>
-			<select className="form-control" id="asciiStyle" value={asciiStyle} onChange={(e) => setAsciiStyle(e.target.value)}>
+			<select className="form-select" id="asciiStyle" value={asciiStyle} onChange={(e) => setAsciiStyle(e.target.value)}>
 			  <option value="">None</option>
 			  <option value="uppercase">Uppercase</option>
 			  <option value="leet">Leet Style</option>

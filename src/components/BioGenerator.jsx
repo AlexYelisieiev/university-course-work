@@ -59,7 +59,7 @@ const BioGenerator = () => {
 					<label className='col-sm-3 col-form-label' htmlFor="theme">Select Theme:</label>
 					<div className='col-sm-9'>
 						<select
-						  className='form-control'
+						  className='form-selec'
 						  id="theme"
 						  value={selectedTheme}
 						  defaultValue={'default'}
